@@ -1,0 +1,18 @@
+<head xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <title th:text="${title == null ? 'HipStack' : title}"></title>
+
+    <meta property="og:title" content="Hipstack App"/>
+    <meta property="og:image" content="title here!"/>
+    <meta property="og:description" content="description here!"/>
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <!-- build:appCss(src/main/webapp/WEB-INF) /dist/app/css/app.libs.css  -->
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <!-- endbuild -->
+
+    <div layout:fragment="css"></div>
+</head>

@@ -1,0 +1,41 @@
+app:
+  views:
+    dir: src
+    prefix: /WEB-INF/${app.views.dir}/
+    suffix: .view.html
+
+info:
+  yml:
+    prefix: ${app.views.prefix}
+
+security:
+  basic:
+    enabled: false
+    
+spring:
+  profiles:
+    active: local
+  datasource:
+    url: jdbc:postgresql://localhost:5432/hipstack
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+  jackson:
+    date-format: yyyy-MM-dd'T'HH:mm:ssZ
+    mapper:
+      default-view-inclusion: false
+
+    serialization:
+      indent-output: true
+
+
+  # Thymeleaf
+  thymeleaf:
+    check-template-location: true
+    prefix: ${app.views.prefix}
+    suffix: ${app.views.suffix}
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    content-type: text/html # ;charset=<encoding> is added
+    cache: false # set to false for hot refresh

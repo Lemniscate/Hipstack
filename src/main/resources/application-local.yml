@@ -1,0 +1,5 @@
+aws:
+  access-key: abc
+  secret-key: 123
+  s3:
+    storage-bucket: hipstack-local-storage

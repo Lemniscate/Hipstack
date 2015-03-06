@@ -1,0 +1,18 @@
+app:
+  views:
+    dir: dist
+
+info:
+  build:
+    deployed: true
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/hipstack
+    #    username:
+    #    password:
+  thymeleaf:
+    cache: true
+  jpa:
+    hibernate:
+      ddl-auto: validate
